@@ -1,4 +1,4 @@
-# Star Catcher — Project Documentation
+# Star Catcher - Project Documentation
 
 ## 1. Overview
 
@@ -12,10 +12,10 @@ The player controls a character at the bottom of the screen and moves horizontal
 
 The project currently uses:
 
-* **Java** — Main programming language
-* **libGDX** — Game development framework
-* **Gradle** — Project build system
-* **IntelliJ IDEA** — Development environment
+* **Java** - Main programming language
+* **libGDX** - Game development framework
+* **Gradle** - Project build system
+* **IntelliJ IDEA** - Development environment
 
 ---
 
