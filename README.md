@@ -1,33 +1,129 @@
-# week1-catchergame
+# ⭐ Star Catcher
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+A simple 2D arcade game developed in **Java using libGDX**.
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+The goal of the game is to catch falling stars while avoiding obstacles and trying to achieve the highest possible score.
 
-## Platforms
+## 🎮 Gameplay
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+The player controls a character at the bottom of the screen and moves left and right to catch falling stars.
 
-## Gradle
+* ⭐ Catch stars to increase your score.
+* 💥 Avoid obstacles or hazards.
+* 🎯 Try to achieve the highest score possible.
+* ⏱️ React quickly as objects fall from the top of the screen.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+## 🕹️ Controls
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+| Key | Action        |
+| --- | ------------- |
+| ←   | Move left     |
+| →   | Move right    |
+| ESC | Exit the game | [In Production]
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+## 🛠️ Technologies
+
+* **Java**
+* **libGDX**
+* **Gradle**
+* **IntelliJ IDEA**
+* **Git / GitHub**
+
+## 📂 Project Structure
+
+```text
+StarCatcher/
+├── core/
+│   └── src/
+│       └── main/
+│           └── java/
+│               └── io/
+│                   └── github/
+│                       └── starcatcher/
+│                           └── StarCatcher.java
+├── assets/
+├── lwjgl3/
+├── gradle/
+├── build.gradle
+├── gradlew
+└── settings.gradle
+```
+
+## 🚀 How to Run
+
+### Prerequisites
+
+Make sure you have:
+
+* Java JDK installed
+* Git installed
+* An IDE such as IntelliJ IDEA or VS Code
+
+### Clone the repository
+
+```bash
+git clone https://github.com/T-R-Malik/StarCatcher.git
+```
+
+Navigate into the project:
+
+```bash
+cd StarCatcher
+```
+
+Run the game using the Gradle desktop configuration.
+
+Alternatively, open the project in IntelliJ IDEA and run the desktop launcher.
+
+## 🧠 What I Learned
+
+This project helped me practice several concepts in Java and game development, including:
+
+* Object-oriented programming
+* Game loops
+* Keyboard input handling
+* Collision detection
+* 2D coordinates and positioning
+* Rendering with libGDX
+* Working with textures and sprites
+* Managing game state
+* Using Git and GitHub for version control
+
+## 📖 Documentation
+
+Detailed documentation for this project is available in the project documentation.
+
+The documentation covers:
+
+* Game concept and objectives
+* Development process
+* Project structure
+* Game loop
+* Player movement
+* Falling objects
+* Collision detection
+* Score system
+* Challenges encountered
+* Solutions and design decisions
+* Future improvements
+
+## 🔮 Future Improvements
+
+Possible improvements include:
+
+* Multiple levels
+* Increasing difficulty
+* Sound effects and background music
+* Animations
+* A start menu and game-over screen
+* High-score tracking
+* Additional types of stars and obstacles
+* Improved visual effects
+
+## 👩‍💻 Author
+
+**Tayyaba Riaz**
+
+Computer Science undergraduate interested in software development and technical writing.
+
+[GitHub](https://github.com/T-R-Malik)
