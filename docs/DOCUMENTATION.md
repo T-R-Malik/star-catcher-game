@@ -206,7 +206,7 @@ The current game loop can be understood as:
         └───────┬───────┘
                 ↓
         ┌───────────────┐
-        │ Render screen  │
+        │ Render screen │
         └───────┬───────┘
                 ↓
              Repeat
