@@ -1,8 +1,8 @@
 # ⭐ Star Catcher
-
 A simple 2D arcade game developed in **Java using libGDX**.
 
 The goal of the game is to catch falling stars while avoiding obstacles and trying to achieve the highest possible score.
+Status: Ongoing
 
 ## 🎮 Gameplay
 
