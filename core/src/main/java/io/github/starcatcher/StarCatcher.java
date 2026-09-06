@@ -23,12 +23,18 @@ public class StarCatcher extends ApplicationAdapter {
     private SpriteBatch batch;
     private BitmapFont font;
     private Viewport viewport;
+    private Texture backgroundTex;
+    private Texture gameOverBG;
+    private Texture terrain;
 
 
     @Override
     public void create() {
         viewport = new FitViewport(640, 480);
 
+        backgroundTex = new Texture(Gdx.files.internal("background/background.png"));
+        gameOverBG = new Texture(Gdx.files.internal("background/gameover.png"));
+        terrain = new Texture(Gdx.files.internal("background/terrain.png"));
         shapeRenderer = new  ShapeRenderer();
         batch = new SpriteBatch();
         font = new BitmapFont(Gdx.files.internal("fonts/font.fnt"));
@@ -61,34 +67,57 @@ public class StarCatcher extends ApplicationAdapter {
         }
 
         viewport.apply();
-        shapeRenderer.setProjectionMatrix(viewport.getCamera().combined);
-
-        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
-        if(!gameOver) {
-            player.draw(shapeRenderer);
-            star.draw(shapeRenderer);
-        }
-        shapeRenderer.end();
 
         batch.setProjectionMatrix(viewport.getCamera().combined);
         batch.begin();
         if (!gameOver) {
+            batch.draw(backgroundTex, 0, 0, viewport.getWorldWidth(), viewport.getWorldHeight());
+            for (int i = 0; i < viewport.getWorldWidth(); i += 45) {
+                batch.draw(terrain, i, 0);
+                batch.draw(terrain, i, 5);
+            }
+
+            player.draw(batch);
+
             font.draw(batch, "Score: " + score, 450, 450);
             font.draw(batch,"Misses: " + misses, 420, 400);
         } else {
+            batch.draw(gameOverBG, 0, 0, viewport.getWorldWidth(), viewport.getWorldHeight());
             font.draw(batch, "GAME OVER!", 180, 350);
             font.draw(batch, "Score: " + score, 230, 300);
             font.draw(batch, "Press R to restart", 100, 250);
+            font.draw(batch, "Press ESC to exit", 120, 200);
         }
         batch.end();
+
+        shapeRenderer.setProjectionMatrix(viewport.getCamera().combined);
+
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+        if(!gameOver) {
+            star.draw(shapeRenderer);
+        }
+        shapeRenderer.end();
 
         if (gameOver && Gdx.input.isKeyJustPressed(Input.Keys.R)) {
             restartGame();
         }
+
+        if (gameOver && Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+            exit();
+        }
+    }
+
+    private void exit() {
+        Gdx.app.exit();
     }
 
     private void restartGame() {
+        score = 0;
+        misses = 0;
+        gameOver = false;
 
+        player.reset();
+        star.reset();
     }
 
     @Override
@@ -101,5 +130,9 @@ public class StarCatcher extends ApplicationAdapter {
         shapeRenderer.dispose();
         batch.dispose();
         font.dispose();
+        backgroundTex.dispose();
+        gameOverBG.dispose();
+        terrain.dispose();
+        player.dispose();
     }
 }

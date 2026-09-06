@@ -39,6 +39,10 @@ public class Star {
         return StarState.FALLING;
     }
 
+    public void reset() {
+        bounds.set(100, viewport.getWorldHeight(), 50, 50);
+    }
+
     public void draw(ShapeRenderer shapeRenderer) {
         shapeRenderer.rect(bounds.x,  bounds.y, bounds.width, bounds.height);
     }

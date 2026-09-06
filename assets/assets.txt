@@ -1,1 +1,30 @@
+background/background.png
+background/gameover.png
+background/terrain.png
+fonts/font.fnt
+fonts/font.png
 libgdx.png
+movement/idle/Wraith_02_Idle_000.png
+movement/idle/Wraith_02_Idle_001.png
+movement/idle/Wraith_02_Idle_002.png
+movement/idle/Wraith_02_Idle_003.png
+movement/idle/Wraith_02_Idle_004.png
+movement/idle/Wraith_02_Idle_005.png
+movement/idle/Wraith_02_Idle_006.png
+movement/idle/Wraith_02_Idle_007.png
+movement/idle/Wraith_02_Idle_008.png
+movement/idle/Wraith_02_Idle_009.png
+movement/idle/Wraith_02_Idle_010.png
+movement/idle/Wraith_02_Idle_011.png
+movement/walking/Wraith_02_Moving Forward_000.png
+movement/walking/Wraith_02_Moving Forward_001.png
+movement/walking/Wraith_02_Moving Forward_002.png
+movement/walking/Wraith_02_Moving Forward_003.png
+movement/walking/Wraith_02_Moving Forward_004.png
+movement/walking/Wraith_02_Moving Forward_005.png
+movement/walking/Wraith_02_Moving Forward_006.png
+movement/walking/Wraith_02_Moving Forward_007.png
+movement/walking/Wraith_02_Moving Forward_008.png
+movement/walking/Wraith_02_Moving Forward_009.png
+movement/walking/Wraith_02_Moving Forward_010.png
+movement/walking/Wraith_02_Moving Forward_011.png
